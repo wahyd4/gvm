@@ -9,3 +9,13 @@ GREP_PATH=$(unalias grep &> /dev/null; which grep) || display_error "$GREP_ERROR
 SORT_PATH=$(unalias sort &> /dev/null; which sort) || display_error "$SORT_ERROR" || return 1
 HEAD_PATH=$(unalias head &> /dev/null; which head) || display_error "$HEAD_ERROR" || return 1
 
+GITHUB_REPO_URL=https://github.com/golang/go.git
+GOOGLE_REPO_URL=https://go.googlesource.com/go
+
+repo_url() {
+	if [[ "$GOOGLE" == "true" ]]; then
+		return GOOGLE_REPO_URL
+	else
+		return GITHUB_REPO_URL
+	fi
+}
