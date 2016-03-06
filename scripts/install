@@ -259,12 +259,12 @@ install_goprotobuf() {
 			return 1
 		fi
 	else
-		$GVM_GOINSTALL code.google.com/p/goprotobuf/proto > "$GVM_ROOT/logs/$GO_NAME-pb-compiler.log" 2>&1
+		$GVM_GOINSTALL github.com/golang/protobuf > "$GVM_ROOT/logs/$GO_NAME-pb-compiler.log" 2>&1
 		if [[ $? -ne 0 ]]; then
 			display_warning "Failed to install goprotobuf. Check the logs at $GVM_ROOT/logs/$GO_NAME-pb-compiler.log"
 			return 1
 		fi
-		$GVM_GOINSTALL code.google.com/p/goprotobuf/protoc-gen-go > "$GVM_ROOT/logs/$GO_NAME-pb-compiler.log" 2>&1
+		$GVM_GOINSTALL github.com/golang/protobuf > "$GVM_ROOT/logs/$GO_NAME-pb-compiler.log" 2>&1
 		if [[ $? -ne 0 ]]; then
 			display_warning "Failed to install goprotobuf compiler. Check the logs at $GVM_ROOT/logs/$GO_NAME-pb-compiler.log"
 			return 1
