@@ -32,13 +32,13 @@ read_command_line "$@"
 echo
 display_message "gvm gos (available)"
 echo
-display_message "h=========="
+
 go_repo_url=git@github.com:golang/go.git
 versions=$(git ls-remote -t ${go_repo_url} | awk -F/ '{ print $NF }' | $SORT_PATH)
 if [[ $? -ne 0 ]]; then
 	display_fatal "Failed to get version list from Github"
 fi
-display_message "~~~~~~~~~~~~~"
+
 for version in $versions; do
 	if [[ "$tag_filter" == "release" ]]; then
 		if [[ "${version:0:7}" == "release" ]]; then
