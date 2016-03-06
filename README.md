@@ -1,10 +1,12 @@
-# gvm
-
-[![Build Status](https://travis-ci.org/moovweb/gvm.svg?branch=master)](https://travis-ci.org/moovweb/gvm)
+# gvm-cn
 
 by Josh Bussdieker (jbuss, jaja, jbussdieker)
 
 GVM provides an interface to manage Go versions.
+
+说明
+========
+该版本使用github的源代码，解决在中国国内不能使用gvm安装Go的问题
 
 Features
 ========
@@ -26,7 +28,7 @@ Installing
 
 To install:
 
-    bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+    bash < <(curl -s -S -L https://raw.githubusercontent.com/wahyd4/gvm/master/binscripts/gvm-installer)
 
 Or if you are using zsh just change `bash` with `zsh`
 
