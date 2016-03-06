@@ -35,7 +35,7 @@ echo
 go_repo_url=repo_url
 versions=$(git ls-remote -t ${go_repo_url} | awk -F/ '{ print $NF }' | $SORT_PATH)
 if [[ $? -ne 0 ]]; then
-	display_fatal "Failed to get version list from Google"
+	display_fatal "Failed to get version list from Github"
 fi
 for version in $versions; do
 	if [[ "$tag_filter" == "release" ]]; then
